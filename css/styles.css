@@ -526,7 +526,9 @@ body {
   margin-top: var(--card-set-gap);
   margin-left: var(--card-set-gap);
 }
-
+.portfolioImg img {
+  display: block;
+}
 .portfolioItems:hover {
   background: var(--color-white);
   box-sizing: border-box;
