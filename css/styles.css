@@ -12,6 +12,7 @@
   --card-set-gap: 30px;
   --background-Hero: rgba(47, 48, 58, 0.4);
   --background-footer-icons: rgba(255, 255, 255, 0.1);
+  --color-icons: rgb(175, 177, 184, 1);
 }
 * {
   text-decoration: none;
@@ -122,12 +123,12 @@ body {
 /* почта */
 .iconMail {
   fill: currentColor;
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
 }
 
 .mail {
+  display: flex;
+  align-items: center;
   color: var(--color-grey);
   font-weight: 500;
   font-size: 14px;
@@ -143,11 +144,11 @@ body {
 /* телефон */
 .iconTel {
   fill: currentColor;
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
 }
 .tel {
+  display: flex;
+  align-items: center;
   color: var(--color-grey);
   font-weight: 500;
   font-size: 14px;
@@ -216,34 +217,19 @@ body {
 .sectionDescription {
   display: flex;
 }
-.descriptionItem:not(:last-child) {
+.iconDescription {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-filter);
+  border-radius: 4px;
+}
+.descriptionItem {
   margin-right: 30px;
 }
-.descriptionItem::before {
-  display: block;
-  content: "";
-  height: 120px;
-  width: 270px;
-  background-size: contain;
-  background-position: center;
-  margin-bottom: 30px;
-}
-.descriptionItem:nth-child(1) {
-  background-image: url(../images/Group1.svg);
-  background-repeat: no-repeat;
-}
-.descriptionItem:nth-child(2) {
-  background-image: url(../images/Group2.svg);
-  background-repeat: no-repeat;
-}
-.descriptionItem:nth-child(3) {
-  background-image: url(../images/Group3.svg);
-  background-repeat: no-repeat;
-}
-.descriptionItem:nth-child(4) {
-  background-image: url(../images/Group4.svg);
-  background-repeat: no-repeat;
-}
+
 .descriptionTitle {
   font-weight: bold;
   font-size: 14px;
@@ -251,6 +237,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .descriptionText {
@@ -311,8 +298,7 @@ body {
   margin-bottom: 50px;
 }
 .team {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 .teamName {
   font-weight: 500;
@@ -332,16 +318,15 @@ body {
 
 /* Иконки- Наша команда */
 .iconList {
-  margin: 16px 32px 30px 32px;
   display: flex;
-  width: 206px;
   align-items: center;
+  margin-top: 16px;
 }
 .iconTeamSvg:not(:last-child) {
   margin-right: 10px;
 }
 .socialLinkTeam {
-  fill: var(--color-grey);
+  fill: var(--color-icons);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -354,7 +339,8 @@ body {
   height: 20px;
 }
 
-.socialLinkTeam:hover {
+.socialLinkTeam:hover,
+.socialLinkTeam:focus {
   fill: var(--color-white);
   background: var(--blue-color);
   border-radius: 50%;
@@ -369,31 +355,33 @@ body {
   display: flex;
 }
 .icon {
+}
+.icon:not(:last-child) {
+  margin-right: 30px;
+}
+.iconSvg {
   border: 1px solid rgba(175, 177, 184, 1);
   display: flex;
   width: 170px;
   height: 92px;
   border-radius: 3px;
 }
-.icon:not(:last-child) {
-  margin-right: 30px;
-}
-.iconSvg {
-  width: 40px;
-  height: 42px;
-}
 .iconClient {
   margin: 16px 32px;
   width: 106px;
   height: 60px;
-  fill: var(--color-grey);
+  fill: var(--color-icons);
   background-color: var(--color-white);
 }
-.icon:hover {
+.iconSvg:focus,
+.iconSvg:hover {
+  fill: var(--blue-color);
   border-color: var(--blue-color);
 }
+.iconClient:focus,
 .iconClient:hover {
   fill: var(--blue-color);
+  border-color: var(--blue-color);
 }
 
 /* Данные */
@@ -471,7 +459,8 @@ body {
 .iconFotterLi:not(:last-child) {
   margin-right: 10px;
 }
-.iconLinkFooter:hover {
+.iconLinkFooter:hover,
+.iconLinkFooter:focus {
   fill: var(--color-white);
   background: var(--blue-color);
   border-radius: 50%;
